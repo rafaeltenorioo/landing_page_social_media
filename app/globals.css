@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  /* Ao adicionar aqui, o Tailwind cria automaticamente as classes:
+     text-gold, bg-gold, border-gold, etc. 
+  */
+  --color-gold-100: #F3E5AB; /* Muito claro: Para brilhos finos ou textos secundários */
+  --color-gold-300: #E5C76B; /* Médio claro: Excelente para estados de Hover */
+  --color-gold-500: #D4AF37; /* O seu Ouro Base (cor principal) */
+  --color-gold-700: #997B29; /* Médio escuro: Para bordas ou ícones discretos */
+  --color-gold-900: #5E4B19; /* Muito escuro: Para fundos de cards ou sombras */
+
+  /* Cores de suporte */
+  --color-black-pure: #000000;
+  --color-black-soft: #0A0A0A;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
