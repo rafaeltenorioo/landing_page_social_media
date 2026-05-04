@@ -19,9 +19,9 @@ export const MenuItems = ({
             animate={{ x: "0" }}
             exit={{ x: "-100%" }}
             transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
-            className="fixed inset-0 w-full h-screen bg-black/30  z-50 md:hidden "
+            className="fixed inset-0 h-screen w-1/2 bg-black/90 backdrop-blur-3xl z-50 md:hidden "
           >
-            <nav className="flex flex-col items-center gap-6 py-8 my-12 border-b border-gold-900">
+            <nav className="flex flex-col items-center gap-6  py-16 my-12 ">
               {listItem.map((item) => {
                 const isActive = activeSection === item.href.replace("#", "");
 

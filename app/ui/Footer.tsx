@@ -20,17 +20,17 @@ interface SocialItem {
 const infoContact: ContactItem[] = [
   {
     id: "email",
-    icon: <AiOutlineMail size={28} />,
+    icon: <AiOutlineMail size={26} />,
     text: "laysgio2002@gmail.com",
   },
   {
     id: "location",
-    icon: <IoLocationSharp size={28} />,
+    icon: <IoLocationSharp size={26} />,
     text: "La Plata, Buenos Aires",
   },
   {
     id: "phone",
-    icon: <MdPhone size={28} />,
+    icon: <MdPhone size={26} />,
     text: "+54 9 221 511 9151",
   },
 ];
@@ -38,13 +38,13 @@ const infoContact: ContactItem[] = [
 const socialLinks: SocialItem[] = [
   {
     id: "instagram",
-    icon: <FaInstagram size={28} />,
+    icon: <FaInstagram size={26} />,
     href: "https://www.instagram.com/",
     ariaLabel: "Link para o Instagram",
   },
   {
     id: "linkedin",
-    icon: <RxLinkedinLogo size={28} />,
+    icon: <RxLinkedinLogo size={26} />,
     href: "https://www.linkedin.com/",
     ariaLabel: "Link para o LinkedIn",
   },
@@ -53,21 +53,9 @@ const socialLinks: SocialItem[] = [
 export const Footer = () => {
   const curretnYear = new Date().getFullYear();
   return (
-    <footer className="bg-gold-900 text-white rounded-t-2xl gap-16 flex flex-col justify-between p-4 md:px-16 md:pt-12 md:pb-8 md:flex-row">
-      {/* Coluna de contatos */}
-      <div className="flex flex-col gap-5 items-center">
-        {infoContact.map((item) => (
-          <div key={item.id} className="flex items-center gap-4 group">
-            {item.icon}
-            <span className="text-white/80 group-hover:text-white text-sm md:text-base">
-              {item.text}
-            </span>
-          </div>
-        ))}
-      </div>
-
-      <div className="flex flex-col gap-5 justify-end items-center md:items-end">
-        <div className="flex">
+    <footer className="bg-gold-900 text-white gap-16 flex flex-col justify-between p-4 md:px-16 md:pt-12 md:pb-8 md:flex-row">
+      <div className="flex flex-col gap-8  items-center md:items-end">
+        <div className="flex gap-3">
           {socialLinks.map((item) => (
             <a
               key={item.id}
@@ -79,6 +67,18 @@ export const Footer = () => {
             >
               {item.icon}
             </a>
+          ))}
+        </div>
+
+        {/* Coluna de contatos */}
+        <div className="flex flex-col gap-5 items-start">
+          {infoContact.map((item) => (
+            <div key={item.id} className="flex items-center  gap-2 group md:gap-4">
+              {item.icon}
+              <span className="text-white/80 group-hover:text-white text-sm md:text-base">
+                {item.text}
+              </span>
+            </div>
           ))}
         </div>
 
